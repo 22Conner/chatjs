@@ -1,13 +1,37 @@
 <!DOCTYPE html>
 <html>
-<body>
-<header><h1>ChatJS</h1></header>
-<nav>
-  <a href="/chatjs/home/">Home</a> |
-  <a href="/chatjs/message/">Message</a> |
-  <a href="/chatjs/account/">Account</a> |
-  <a href="/chatjs/credits/">Credits</a>
-</nav>
-  
-</body>
+  <head>
+    <script type="module" src="index.mjs"></script>
+
+  </head>
+  <script>
+    
+    function signUp() {
+      const u = document.getElementById("user").value;
+      const p = document.getElementById("pass").value;
+      console.log(u, p);
+       checkIfUsernameExists(u);
+    }
+
+    function logIn() {
+      const u = document.getElementById("user").value;
+      const p = document.getElementById("pass").value;
+      console.log(u, p);
+    }
+  </script>
+
+  <body>
+    <header><h1>ChatJS</h1></header>
+    <nav>
+      <a href="/chatjs/home/">Sign Up / Log In</a> |
+      <a href="/chatjs/message/">Credits</a> |
+    </nav>
+    <p></p>
+    <input type="text" id="user" placeholder="Username">
+    <p></p>
+    <input type="text" id="pass" placeholder="Password">
+    <p></p>
+    <button onclick="signUp()">Sign Up</button>
+    <button onclick="logIn()">Log In</button>
+  </body>
 </html>
